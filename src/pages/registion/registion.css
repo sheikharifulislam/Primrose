@@ -1,0 +1,84 @@
+.registion-section {
+  margin-top: 50px;
+}
+
+.registion-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.registion-image {
+  width: 40%;
+}
+
+.registion-image img {
+  width: 100%;
+}
+
+.registion-from-container {
+  width: 40%;
+}
+
+.registion-form-container-title h2 {
+  font-family: "Cormorant", serif;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.form-design input[type="text"],
+.form-design input[type="email"],
+.form-design input[type="number"],
+.form-design input[type="password"] {
+  display: block;
+  width: 70%;
+  padding-bottom: 7px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid blue;
+  margin-top: 20px;
+  outline: none;
+}
+
+.form-design small {
+  display: block;
+  width: 70%;
+  font-size: 10px;
+  color: red;
+}
+
+input[type="submit"] {
+  display: block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: dodgerblue;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+/*************************************
+*****remove inut type number array****
+*************************************/
+
+/*for Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* for moz firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.all-redy-register p {
+  text-align: left;
+  margin-top: 30px;
+}

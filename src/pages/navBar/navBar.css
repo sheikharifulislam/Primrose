@@ -1,0 +1,55 @@
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Allerta&family=Cormorant:wght@400;500&family=Poppins&family=Roboto&display=swap");
+
+/*******************************
+*********start main style********
+********************************/
+
+.header {
+  margin-top: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 7px;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.web-site-logo img {
+  height: 50px;
+}
+
+.menu nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.menu nav ul a {
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #333;
+  margin: 0 30px;
+  font-family: "Cormorant", serif;
+  font-size: 18px;
+}
+
+#dashboard {
+  background-color: blue;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+}

@@ -1,0 +1,15 @@
+.best-selling-products {
+  margin-top: 100px;
+}
+
+.best-selling-product-section-title h2 {
+  font-family: "Cormorant", serif;
+  font-size: 30px;
+}
+
+.all-best-selling-products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}

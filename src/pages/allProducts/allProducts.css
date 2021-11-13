@@ -1,0 +1,19 @@
+.all-products-section {
+  margin-top: 30px;
+}
+.container-fluid {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.all-products-section-title h2 {
+  font-family: "Cormorant", serif;
+  font-size: 30px;
+}
+
+.all-products-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}

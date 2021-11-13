@@ -1,0 +1,57 @@
+.shipping-form-container {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #eee;
+  padding: 50px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.shipping-form-container h2 {
+  text-transform: capitalize;
+  font-family: "Cormorant", serif;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.shipping-form-design input[type="text"],
+.shipping-form-design input[type="email"],
+.shipping-form-design input[type="tel"] {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 13px 0 13px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 2px solid #eee;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.shipping-form-design input[type="text"]:focus,
+.shipping-form-design input[type="email"]:focus,
+.shipping-form-design input[type="tel"]:focus {
+  border: 1px solid blue;
+}
+
+.shipping-form-design input[type="submit"] {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 13px 35px;
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border: 1px solid #000;
+  cursor: pointer;
+}

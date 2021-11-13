@@ -1,0 +1,110 @@
+[
+    {
+        "id": "fc87f782-a323-43bc-97d6-272983c0e2eb",
+        "productImage": "https://static-01.daraz.com.bd/p/c01034bdb4a858c17dbb1f27ac085f37.jpg",
+        "productName": "Parachute Naturale Shampoo Nourishing Care 170ml",
+        "mainPrice": "190",
+        "offerPrice": "105",
+        "totalStar": "1700",
+        "totlaComment": "370"
+    },
+    {
+        "id": "fc830782-a323-43bc-97d6-272983c0e2eb",
+        "productImage": "https://static-01.daraz.com.bd/p/e3d407817ccb54300325f1e505acfdb2.jpg",
+        "productName": "Parachute Naturale Shampoo Damage Repair 170ml",
+        "mainPrice": "190",
+        "offerPrice": "105",
+        "totalStar": "900",
+        "totlaComment": "218"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-272983c0e2eb",
+        "productImage": "https://static-01.daraz.com.bd/p/42c834940c3d019176d269ad6c35263f.jpg",
+        "productName": "Parachute Naturale Shampoo Anti Hair Fall 340ml",
+        "mainPrice": "330",
+        "offerPrice": "190",
+        "totalStar": "1650",
+        "totlaComment": "333"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-2729200e2eb",
+        "productImage": "https://static-01.daraz.com.bd/p/2377769c56a2a320f562b40d2cdb9b4f.jpg",
+        "productName": "Parachute Naturale Shampoo Hijab Fresh 170ml",
+        "mainPrice": "195",
+        "offerPrice": "110",
+        "totalStar": "130",
+        "totlaComment": "33"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-2729028562eb",
+        "productImage": "https://static-01.daraz.com.bd/p/mdc/92cc7730c1bee329fbe7a4eba5d922b1.jpg",
+        "productName": "Clear Shampoo Men Cool Sport Menthol Anti Dandruff 180ml",
+        "mainPrice": "240",
+        "offerPrice": "230",
+        "totalStar": "1700",
+        "totlaComment": "354"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-27290208562eb",
+        "productImage": "https://static-01.daraz.com.bd/p/mdc/5c2545fba10846a8ccbf3f81994e57ff.jpg",
+        "productName": "Clear Shampoo Anti Hairfall Anti Dandruff 180ml",
+        "mainPrice": "200",
+        "offerPrice": "190",
+        "totalStar": "850",
+        "totlaComment": "186"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-27moem62eb",
+        "productImage": "https://static-01.daraz.com.bd/p/e82d1945f121dab4fdc46292ef8eee20.jpg",
+        "productName": "Clear Shampoo Complete Active Care Anti Dandruff 180ml",
+        "mainPrice": "200",
+        "offerPrice": "195",
+        "totalStar": "320",
+        "totlaComment": "64"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-203m5eb",
+        "productImage": "https://static-01.daraz.com.bd/p/8906299ba61ee504740e4fc4435c3ff3.jpg",
+        "productName": "Clear Hijab Anti Limp Anti Dandruff Shampoo 350ml",
+        "mainPrice": "350",
+        "offerPrice": "340",
+        "totalStar": "200",
+        "totlaComment": "51"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-230o3m08b",
+        "productImage": "https://static-01.daraz.com.bd/p/f4bc55b4eda5967381cde8063eeb7343.jpg",
+        "productName": "Head & Shoulders Cool Menthol Anti Dandruff Shampoo for Women & Men, 340ML",
+        "mainPrice": "430",
+        "offerPrice": "334",
+        "totalStar": "280",
+        "totlaComment": "65"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-230108b",
+        "productImage": "https://static-01.daraz.com.bd/p/e3ef10780a9ac8ddb1ebf52720fe0078.jpg",
+        "productName": "Head & Shoulders, Anti-Hairfall, Anti-Dandruff Shampoo for Women & Men 340ML",
+        "mainPrice": "334",
+        "offerPrice": "430",
+        "totalStar": "190",
+        "totlaComment": "42"
+    },
+    {
+        "id": "fc830782-a323-43bc-10856-230108b1",
+        "productImage": "https://static-01.daraz.com.bd/p/0a097b1fd41ac74f5e994c057d8437e1.jpg",
+        "productName": "Head & Shoulders Neem, Anti Dandruff Shampoo 180 ml",
+        "mainPrice": "299",
+        "offerPrice": "289",
+        "totalStar": "20",
+        "totlaComment": "4"
+    },
+    {
+        "id": "fc830782-a323-43bc-1-9384108b",
+        "productImage": "https://static-01.daraz.com.bd/p/21ee3f2748bef373087beff254d962ab.jpg",
+        "productName": "Head & Shoulders Lemon Fresh Anti Dandruff Shampoo for Women & Men, 180ML",
+        "mainPrice": "239",
+        "offerPrice": "249",
+        "totalStar": "60",
+        "totlaComment": "14"
+    }
+]
