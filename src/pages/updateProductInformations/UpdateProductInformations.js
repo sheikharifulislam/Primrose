@@ -18,7 +18,7 @@ const UpdateProductInformations = () => {
     })
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/single-product?productId=${PreviousProductId}`)
+        axios.get(`https://glacial-ridge-32887.herokuapp.com/single-product?productId=${PreviousProductId}`)
         .then((response) => {
             setProductData(response.data);            
         })
@@ -39,7 +39,7 @@ const UpdateProductInformations = () => {
 
     const handelUpdateForm = e => {        
         e.preventDefault();
-        axios.patch(`http://localhost:5000/update-product-info?productId=${PreviousProductId}`,productData)
+        axios.patch(`https://glacial-ridge-32887.herokuapp.com/update-product-info?productId=${PreviousProductId}`,productData)
         .then((response) => {            
             if(response.data.modifiedCount) {
                 alert('Succefull Update Product Informations');

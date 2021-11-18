@@ -81,12 +81,12 @@ const useFirebase = () => {
            name,
            email,
         }       
-        axios.post('http://localhost:5000/add-new-user',newUser);        
+        axios.post('https://glacial-ridge-32887.herokuapp.com/add-new-user',newUser);        
     }
 
     useEffect(() => {
         setAdminLoading(true);
-        axios.get(`http://localhost:5000/chack-isAdmin?email=${user.email}`)
+        axios.get(`https://glacial-ridge-32887.herokuapp.com/chack-isAdmin?email=${user.email}`)
         .then((response) => {            
             setAdmin(response.data);
             setAdminLoading(false);

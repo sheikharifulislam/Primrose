@@ -8,7 +8,7 @@ import axios from 'axios';
 const AllProducts = () => {
     const [allProduct, setAllProduct] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/all-products')
+        axios.get('https://glacial-ridge-32887.herokuapp.com/all-products')
         .then((response) => {
             setAllProduct(response.data);
         })

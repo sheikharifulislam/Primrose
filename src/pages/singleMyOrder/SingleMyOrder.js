@@ -19,7 +19,7 @@ const SingleMyOrder = ({product}) => {
         const confirm = window.confirm('Are you sure you want to cancel Order');
         if(confirm) {
             setNewOrderStatus('cancle');       
-            axios.patch(`http://localhost:5000/update-product-status?orderId=${product._id}`,{newOrderStatus:'cancle'})
+            axios.patch(`https://glacial-ridge-32887.herokuapp.com/update-product-status?orderId=${product._id}`,{newOrderStatus:'cancle'})
             .then((response) => {
                 if(response.data.modifiedCount) {
                     alert('order Cancle Succefull');               
@@ -33,7 +33,7 @@ const SingleMyOrder = ({product}) => {
 
     const handleProductReview = e => {
         setNewOrderStatus('review');       
-        axios.patch(`http://localhost:5000/update-product-status?orderId=${product._id}`,{newOrderStatus:'review'})
+        axios.patch(`https://glacial-ridge-32887.herokuapp.com/update-product-status?orderId=${product._id}`,{newOrderStatus:'review'})
         .then((response) => {
             if(response.data.modifiedCount) {
                 navigate(`/product-review/${product._id}`,{

@@ -15,7 +15,7 @@ const MyAllReview = () => {
     const {user} = UseFirebaseAuth();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/all-reviews?userEmail=${user.email}`)
+        axios.get(`https://glacial-ridge-32887.herokuapp.com/all-reviews?userEmail=${user.email}`)
         .then((response) => {
             setAllReviews(response.data);           
         })

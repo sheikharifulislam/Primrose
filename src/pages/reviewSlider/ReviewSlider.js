@@ -12,7 +12,7 @@ const ReviewSlider = () => {
     const [star, setStar] = useState(0);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/all-reviews')
+        axios.get('https://glacial-ridge-32887.herokuapp.com/all-reviews')
         .then((response) => {          
           setReviewData(response.data.slice(response.data.length - 3 ))
         }) 

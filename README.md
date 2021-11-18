@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Primerose
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[PrimeRose Web-site link ](https://github.com/facebook/create-react-app)
+
+- It is a simple simple Niche Product Web site
+  <br/>
+- You can order any product tthat is on th web if you want
+  <br/>
+- You can cancle you order if you wish
+  <br/>
+- If you want,you can review the products you have ordered
+
+This project was bootstrapped with .
 
 ## Available Scripts
 
@@ -68,4 +78,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # niche-website-client-side-sheikharifulislam

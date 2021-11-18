@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     const handleMakeAdminForm = e => {
         const userEmail = {email}
         e.preventDefault();
-        axios.patch('http://localhost:5000/create-new-admin',userEmail)
+        axios.patch('https://glacial-ridge-32887.herokuapp.com/create-new-admin',userEmail)
         .then((response) => {           
             if(response.data.modifiedCount >= 1) {               
                 alert('Succefully Create Admin');

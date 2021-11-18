@@ -16,7 +16,7 @@ const MyAllOrders = () => {
     const [myAllOrders, setMyAllOrders] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/all-orders?userEmail=${user.email}`)
+        axios.get(`https://glacial-ridge-32887.herokuapp.com/all-orders?userEmail=${user.email}`)
         .then((response) => {
             setMyAllOrders(response.data)
         })

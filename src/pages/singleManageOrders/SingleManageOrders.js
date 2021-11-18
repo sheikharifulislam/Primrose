@@ -13,7 +13,7 @@ const SingleManageOrders = ({product}) => {
     const handleDeleteProduct = (e) => {        
         const confirm = window.confirm('Are you sure you want to delete Product');
         if(confirm) {
-            axios.delete(`http://localhost:5000/delete-single-product?productId=${_id}`)
+            axios.delete(`https://glacial-ridge-32887.herokuapp.com/delete-single-product?productId=${_id}`)
             .then((response) => {
                 if(response.data.deletedCount) {
                 e.target.parentElement.parentElement.remove();

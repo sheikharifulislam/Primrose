@@ -21,7 +21,7 @@ const AddNewProduct = () => {
         if(productData.offerPrice === 0) {
             productData.offerPrice = productData.mainPrice;
         }
-        axios.post('http://localhost:5000/add-new-product',productData)
+        axios.post('https://glacial-ridge-32887.herokuapp.com/add-new-product',productData)
         .then((response) => {
             if(response.data.insertedId) {
                 alert('Successfully Add Product');

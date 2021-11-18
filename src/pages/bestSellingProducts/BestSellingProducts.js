@@ -7,7 +7,7 @@ const BestSellingProducts = () => {
 
     const [allProduct, setAllProduct] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/all-products?limit=6')
+        axios.get('https://glacial-ridge-32887.herokuapp.com/all-products?limit=6')
         .then((response) =>  {
             setAllProduct(response.data);            
         })

@@ -61,7 +61,7 @@ const UserReview = () => {
         }
         
         
-        axios.post('http://localhost:5000/add-new-review',updateReviewData)
+        axios.post('https://glacial-ridge-32887.herokuapp.com/add-new-review',updateReviewData)
         .then((response) => {
             if(response.data.insertedId) {
                 alert('Successfully added Review');

@@ -34,7 +34,7 @@ const Shipping = () => {
     //load single product data 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/single-product?productId=${OrderProductId}`)
+        axios.get(`https://glacial-ridge-32887.herokuapp.com/single-product?productId=${OrderProductId}`)
         .then((response) => {
             setOrderProductData(response.data);                           
         })
@@ -79,7 +79,7 @@ const Shipping = () => {
            orderStatus: 'pending',
         }
 
-        axios.post('http://localhost:5000/add-new-order',data)
+        axios.post('https://glacial-ridge-32887.herokuapp.com/add-new-order',data)
         .then((response) => {
             if(response.data.insertedId) {
                 alert('Product Order Successfull');

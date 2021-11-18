@@ -14,7 +14,7 @@ const ManageAllProduct = () => {
     const [allProducts, setAllProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/all-products') 
+        axios.get('https://glacial-ridge-32887.herokuapp.com/all-products') 
         .then((response) => {
             setAllProducts(response.data);            
         })
