@@ -2,7 +2,7 @@ import React from 'react';
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import './singleBestSellingProduct.css';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const SingleBestSellingProduct = ({data}) => {
     const {_id,productName,productImage,offerPrice,mainPrice,totalStar,totlaComment} = data;
