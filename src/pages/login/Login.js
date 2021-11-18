@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
 import { NavLink,useNavigate,useLocation} from 'react-router-dom';
-import useFirebaseProvider from '../../customhook/useFirebaseProvider';
+import UseFirebaseAuth from '../../customhook/UseFirebaseAuth';
 import loginImage from '../../images/Mobile login.gif';
 import NavBar from '../navBar/NavBar';
+import Footer from '../footer/Footer';
 import './login.css';
 
 const Login = () => {
@@ -11,7 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const {login} = useFirebaseProvider();
+    const {login} = UseFirebaseAuth();
     
     const handleLoginForm = e => {
         e.preventDefault();
@@ -60,6 +61,7 @@ const Login = () => {
                     </div>               
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

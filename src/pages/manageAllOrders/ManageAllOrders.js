@@ -7,16 +7,14 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
-import UseFirebaseAuth from '../../customhook/UseFirebaseAuth';
-import SingleMyOrder from '../singleMyOrder/SingleMyOrder';
+import SingleManageOrder from '../singleManageOrder.js/SingleManageOrder';
 
-const MyAllOrders = () => {
+const ManageAllOrders = () => {
 
-    const {user} = UseFirebaseAuth();
     const [myAllOrders, setMyAllOrders] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/all-orders?userEmail=${user.email}`)
+        axios.get(`http://localhost:5000/all-orders`)
         .then((response) => {
             setMyAllOrders(response.data)
         })
@@ -41,7 +39,7 @@ const MyAllOrders = () => {
                     </TableHead>
                     <TableBody>
                         {
-                            myAllOrders.map((product) => <SingleMyOrder key={product._id} product={product}/>)
+                            myAllOrders.map((product) => <SingleManageOrder key={product._id} product={product}/>)
                         }
                     </TableBody>
                 </Table>
@@ -50,4 +48,4 @@ const MyAllOrders = () => {
     );
 };
 
-export default MyAllOrders;
+export default ManageAllOrders;

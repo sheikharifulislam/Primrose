@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import './singleProduct.css';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const SingleProduct = ({product}) => {
-    const {productName,productImage,mainPrice,offerPrice,totalStar,totlaComment} = product;
-    const [orderProduct, setOrderProduct] = useState({});       
+    const {_id,productName,productImage,mainPrice,offerPrice,totalStar,totlaComment} = product;       
     const navigate = useNavigate();
-    
-    function handleBuyNow (data) {        
-         setOrderProduct(data);         
-         navigate("/shipping",{
+
+    function handleBuyNow (id) {                   
+         navigate(`/shipping/${id}`,{
              replace: true,
-         })
+         })        
     }
     return (
         <div className="single-product">
@@ -28,10 +28,13 @@ const SingleProduct = ({product}) => {
                     <div className="single-product-offer-price">
                         <small className="offer-price">${offerPrice}</small>
                     </div>
-                    <div className="single-product-main-price">
-                        <strike className="main-price">${mainPrice}</strike>
-                        <small className="offer">-{Math.round(((mainPrice - offerPrice) / mainPrice) * 100)}%</small>
-                    </div>
+                    {
+                        mainPrice !== offerPrice &&
+                        <div className="single-product-main-price">
+                            <strike className="main-price">${mainPrice}</strike>
+                            <small className="offer">-{Math.round(((mainPrice - offerPrice) / mainPrice) * 100)}%</small>
+                        </div> 
+                    }
                 </div>
                 <div className="single-product-footer-section">
                     <div className="single-product-rating-section">
@@ -47,7 +50,7 @@ const SingleProduct = ({product}) => {
                         </div>
                     </div>
                     <div className="single-product-buy-button">
-                        <button onClick={() => handleBuyNow(product)}>Buy Now</button>
+                        <button onClick={() => handleBuyNow(_id)}>Buy Now</button>
                     </div> 
                 </div>
             </div>

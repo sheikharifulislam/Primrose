@@ -2,6 +2,11 @@
   margin-top: 100px;
 }
 
+.container-mediam {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .best-selling-product-section-title h2 {
   font-family: "Cormorant", serif;
   font-size: 30px;
@@ -12,4 +17,13 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .best-selling-product-section-title h2 {
+    font-size: 25px;
+  }
+  .all-best-selling-products {
+    flex-direction: column;
+  }
 }

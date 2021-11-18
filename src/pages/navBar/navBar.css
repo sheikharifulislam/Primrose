@@ -53,3 +53,39 @@
   -o-border-radius: 5px;
   border: none;
 }
+
+.response-menu-bar {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: none;
+    z-index: 50;
+    background-color: #000;
+  }
+
+  .menu nav ul {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .menu nav ul li a {
+    margin-bottom: 35px;
+    color: #fff;
+  }
+
+  .response-menu-bar {
+    display: block;
+  }
+
+  .response-menu-bar li {
+    list-style: none;
+    font-size: 40px;
+    margin-top: -3px;
+  }
+}

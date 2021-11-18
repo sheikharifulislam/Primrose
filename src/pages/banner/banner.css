@@ -1,23 +1,84 @@
-.banner-image img {
-  width: 100%;
-  height: 540px;
+.web-banner {
   position: relative;
 }
 
-.banner-into-text {
+.web-banner .banner-image {
+  display: block;
+  width: 100%;
+  height: 540px;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-into-container {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.banner-into-text {
+  width: 35%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+  -moz-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+  text-align: center;
+  color: #fff;
 }
 
 .banner-into-text h2 {
-  width: 50%;
   font-family: "Cormorant", serif;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+#more-product-button {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 15px 25px;
+  background: linear-gradient(to right, #002bb8, #fc0fc0);
   color: #fff;
-  font-size: 50px;
+  font-size: 14px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  font-family: "Allerta", sans-serif;
+  border: none;
+  outline: none;
+}
+
+.banner-into-text p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+  .web-banner .banner-image {
+    width: 100%;
+    height: 400px;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-into-text {
+    width: 100%;
+  }
+  .banner-into-text {
+    top: 10%;
+  }
 }

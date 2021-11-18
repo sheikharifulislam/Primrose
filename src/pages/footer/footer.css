@@ -124,3 +124,28 @@
   text-transform: capitalize;
   font-size: 14px;
 }
+
+@media screen and (max-width: 480px) {
+  .footer-link-container,
+  .country-change-and-flow-section,
+  .footer-bottom {
+    flex-direction: column;
+  }
+  .all-product-link-section,
+  .tips-and-advice-section,
+  .about-section,
+  .suport-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .flow-section {
+    margin-top: 20px;
+  }
+  .company-extra-info-section {
+    text-align: center;
+  }
+  .copyright-section {
+    margin-top: 15px;
+  }
+}

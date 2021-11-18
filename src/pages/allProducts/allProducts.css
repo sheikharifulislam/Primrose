@@ -1,7 +1,7 @@
 .all-products-section {
   margin-top: 30px;
 }
-.container-fluid {
+.container-xl {
   width: 90%;
   margin: 0 auto;
 }
@@ -13,7 +13,15 @@
 
 .all-products-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .all-products-container {
+    flex-direction: column;
+  }
+  .container-xl {
+    width: 80%;
+  }
 }

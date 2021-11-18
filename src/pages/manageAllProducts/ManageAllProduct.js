@@ -7,23 +7,23 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
-import UseFirebaseAuth from '../../customhook/UseFirebaseAuth';
-import SingleMyOrder from '../singleMyOrder/SingleMyOrder';
+import SingleManageOrders from '../singleManageOrders/SingleManageOrders';
 
-const MyAllOrders = () => {
-
-    const {user} = UseFirebaseAuth();
-    const [myAllOrders, setMyAllOrders] = useState([]);
+const ManageAllProduct = () => {
+    
+    const [allProducts, setAllProducts] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/all-orders?userEmail=${user.email}`)
+        axios.get('http://localhost:5000/all-products') 
         .then((response) => {
-            setMyAllOrders(response.data)
+            setAllProducts(response.data);            
         })
         .catch((error) => {
-            console.log(error.message)
+            console.log(error.message);
         })
     },[])
+
+    
 
     return (
         <div>
@@ -31,17 +31,16 @@ const MyAllOrders = () => {
                 <Table  aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Product Name</TableCell>
-                            <TableCell align="center">Product Price</TableCell>
-                            <TableCell align="center">Order Date</TableCell>
-                            <TableCell align="center">Order Time</TableCell>
-                            <TableCell align="center">Order Status</TableCell>    
+                            <TableCell>Name</TableCell>
+                            <TableCell align="center">Main Price</TableCell>
+                            <TableCell align="center">Offer Price</TableCell>
+                            <TableCell align="center">Quantity</TableCell>  
                             <TableCell align="center">Action</TableCell>           
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {
-                            myAllOrders.map((product) => <SingleMyOrder key={product._id} product={product}/>)
+                            allProducts.map((product) => <SingleManageOrders key={product._id} product={product}/>)
                         }
                     </TableBody>
                 </Table>
@@ -50,4 +49,4 @@ const MyAllOrders = () => {
     );
 };
 
-export default MyAllOrders;
+export default ManageAllProduct;

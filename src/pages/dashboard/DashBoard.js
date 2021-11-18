@@ -13,30 +13,50 @@ import Typography from '@mui/material/Typography';
 import {NavLink} from 'react-router-dom';
 import {Outlet} from 'react-router-dom';
 import './dashBoard.css';
+import UseFirebaseAuth from '../../customhook/UseFirebaseAuth';
 
 const drawerWidth = 240;
 
 const Dashboard = (props) => {
-    const { window } = props;
+  const {logOut,admin} = UseFirebaseAuth()
+  
+
+
+  const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleLogOut = () => {
+    logOut();
+  }
+
   const drawer = (    
     <div>
       <Toolbar />
       <Divider />      
       <List className="list">
-        <NavLink to="my-all-orders">My All Orders</NavLink>
-        <NavLink to="reviews">Reviews</NavLink>
-        <NavLink to="/manage-all-orders">Manage All Orders</NavLink> 
-        <NavLink to="/add-product">Add Product</NavLink>
-        <NavLink to="/make-admin">Make Admin</NavLink> 
-        <NavLink to="/manage-products">Manage Products</NavLink>           
-        <NavLink to="/Pay">Pay</NavLink>
-        <button>Log Out</button>           
+        <NavLink to="/home">Home</NavLink>
+        {
+          !admin.isAdmin &&
+          <Box>
+              <NavLink to="my-all-orders">My All Orders</NavLink>
+              <NavLink to="reviews">Reviews</NavLink>
+          </Box>
+        }
+        {
+          admin.isAdmin &&
+          <Box>
+              <NavLink to="manage-all-orders">Manage All Orders</NavLink> 
+              <NavLink to="add-product">Add Product</NavLink>
+              <NavLink to="make-admin">Make Admin</NavLink> 
+              <NavLink to="manage-products">Manage Products</NavLink>           
+              <NavLink to="Pay">Pay</NavLink>
+          </Box>
+        }       
+        <button onClick={handleLogOut}>Log Out</button>           
       </List>      
     </div>
   );
@@ -103,7 +123,7 @@ const Dashboard = (props) => {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}        
       >
         <Toolbar />
           <Outlet/>                   

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import {useNavigate,useLocation, NavLink} from 'react-router-dom';
-import useFirebaseProvider from '../../customhook/useFirebaseProvider';
+import UseFirebaseAuth from '../../customhook/UseFirebaseAuth';
 import RegistionImage from '../../images/Mobile register.gif';
+import NavBar from '../navBar/NavBar';
+import Footer from '../footer/Footer';
 import './registion.css';
 
 const Registion = () => {
@@ -11,28 +13,22 @@ const Registion = () => {
     const navigate = useNavigate();
     const location = useLocation();     
 
-    const {register} = useFirebaseProvider();
+    const {register} = UseFirebaseAuth();
 
     const hindleRegistionForm = e => {
         e.preventDefault();
         setPasswordError({});
-        if(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(registionData.password)) {
-            if(registionData.password !== registionData.confirmPassword) {
-                const passwordMatchError = "password and confirm password not match";
-                setPasswordError({...passwordError,passwordMatchError});
-                return;
-            }
-            else {
-                const {userName,userEmail,userMobileNumber,password} = registionData;
-                 register(userName,userEmail,userMobileNumber, password,navigate,location)
-            }
+        if(registionData.password !== registionData.confirmPassword) {
+            const passwordMatchError = "password and confirm password not match";
+            setPasswordError({...passwordError,passwordMatchError});
+            return;
         }
         else {
-            const passwordStrongError = 'Please include atleast 1 uppercase character, 1 lowercase character, 1 digit and 1 special character';
-            setPasswordError({...passwordError,passwordStrongError});
-            return;
-        }      
-        e.target.reset();
+            const {userName,userEmail,userMobileNumber,password} = registionData;
+             register(userName,userEmail,userMobileNumber, password,navigate,location);
+             e.target.reset();
+        } 
+       
     }
 
  
@@ -47,6 +43,7 @@ const Registion = () => {
 
     return (
         <>
+            <NavBar/>
             <div className="registion-section">
                 <div className="container">
                     <div className="registion-container">
@@ -69,11 +66,7 @@ const Registion = () => {
                                         <input type="number" placeholder="Enter Your Mobile Number" name="userMobileNumber" onInput={handleRegistionInput} required />
                                     </div>
                                     <div className="form-design">
-                                        <input type="password" placeholder="Creat Password (Min 8 Characters)" title="Please include atleast 1 uppercase character, 1 lowecase charcter, 1 digit and 1 special charcter" name="password" onInput={handleRegistionInput} required />
-                                        {
-                                            passwordError.passwordStrongError &&
-                                            <small>{passwordError?.passwordStrongError}</small>
-                                        }
+                                        <input type="password" placeholder="Creat Password (Min 8 Characters)" title="Please include atleast 1 uppercase character, 1 lowecase charcter, 1 digit and 1 special charcter" name="password" onInput={handleRegistionInput} required />                                        
                                     </div>
                                     <div className="form-design">
                                         <input type="password" placeholder="Confirm your password" name="confirmPassword" onInput={handleRegistionInput} required />
@@ -92,6 +85,7 @@ const Registion = () => {
                     </div>               
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

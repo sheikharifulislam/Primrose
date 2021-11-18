@@ -1,14 +1,14 @@
 import React,{createContext} from 'react';
 import useFirebase from '../customhook/useFirebase';
 
-export const AuthContext = createContext()
+export const FirebaseContext = createContext()
 
-const FirebaseProvider = ({children}) => {
-    const allContext = useFirebase();  
+const FirebaseProvider = ({children}) => {   
+    const firebase = useFirebase();  
     return (
-       <AuthContext.Provider value={allContext}>
+       <FirebaseContext.Provider value={firebase}>
            {children}
-       </AuthContext.Provider>
+       </FirebaseContext.Provider>
     );
 };
 
