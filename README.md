@@ -8,7 +8,7 @@
   <br/>
 - You can cancle you order if you wish
   <br/>
-- If you want,you can review the products you have ordered
+- If you want,you can review the products you have ordered abc
 
 This project was bootstrapped with .
 
