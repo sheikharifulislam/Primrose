@@ -50,8 +50,7 @@ const Dashboard = (props) => {
           admin.isAdmin &&
           <Box>
               <NavLink to="manage-all-orders">Manage All Orders</NavLink> 
-              <NavLink to="add-product">Add Product</NavLink>
-              <NavLink to="make-admin">Make Admin</NavLink> 
+              <NavLink to="add-product">Add Product</NavLink>              
               <NavLink to="manage-products">Manage Products</NavLink>           
               <NavLink to="Pay">Pay</NavLink>
           </Box>

@@ -15,7 +15,6 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ManageAllProduct from "./pages/manageAllProducts/ManageAllProduct";
 import AddNewProduct from "./pages/addNewProduct/AddNewProduct";
 import UpdateProductInformations from "./pages/updateProductInformations/UpdateProductInformations";
-import MakeAdmin from "./pages/makeAdmin/MakeAdmin";
 import ManageAllOrders from "./pages/manageAllOrders/ManageAllOrders";
 import UserReview from "./pages/userReview/UserReview";
 import MyAllReview from "./pages/myAllReview/MyAllReview";
@@ -65,12 +64,7 @@ function App() {
                   <AdminPrivateRoute>
                       <AddNewProduct/>
                   </AdminPrivateRoute>
-                }/>
-                <Route path="make-admin" element={
-                  <AdminPrivateRoute>
-                    <MakeAdmin/>
-                  </AdminPrivateRoute>
-                }/>
+                }/>               
                 <Route path="manage-all-orders" element={
                   <AdminPrivateRoute>
                       <ManageAllOrders/>
